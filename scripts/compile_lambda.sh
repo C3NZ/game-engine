@@ -29,8 +29,7 @@ if [ "$LAMBDA_build" = "Release" ] || [ "$LAMBDA_build" = "Debug" ]; then
     LAMBDA_INFO "Compiling a $LAMBDA_build build for the engine."
     cmake .. \
         -DCMAKE_BUILD_TYPE="$LAMBDA_build" \
-        -DDISTRIBUTION_BUILD=False \
-        -DENGINE_DEVELOPMENT_MODE=True
+        -DDISTRIBUTION_BUILD=False
 elif [ "$LAMBDA_build" = "Dist" ]; then
     LAMBDA_INFO "Compiling a distribution build for the engine."
     cmake .. \
